@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./Project/css/style.css" />
+    <link rel="stylesheet" href="./Project/css/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,78 +16,92 @@
   </head>
   <body>
     
+    <div class="block"></div>
+
     <!-- header -->
-    <div class="header">
+    <header class="header">
       <h1 class="header-title">Юрий Ключевский</h1>
       <p class="header-subtitle">фрилансер, веб-разработчик, создание сайтов</p>
       <div class="header-arrow">
-        <img src="./img/header/chevron-down.svg" alt="arrow" />
+        <img src="./Project/img/header/chevron-down.svg" alt="arrow" />
       </div>
-    </div>
+    </header>
     <!-- // header -->
 
     <!-- portfolio -->
-    <div class="portfolio">
+  <main class="">
+    <section class="portfolio">
       <div class="container">
         <h2 class="portfolio-header">Портфолио</h2>
 
         <!-- portfolio-cards-wrapper -->
         <div class="portfolio-cards-wrapper">
           <!-- card -->
+
           <div class="card">
-            <img
-              class="card-img"
-              src="./img/portfolio/forrest.jpg"
-              alt="многостранчный сайт"
-            />
-            <h3 class="card-title">Многостраничный сайт</h3>
-            <p>Верстка многостранчного сайта.</p>
+            <a href="forest-travel.html" class="card-link" target="_blank">
+                <img
+                class="card-img"
+                src="./Project/img/portfolio/forrest.jpg"
+                alt="многостранчный сайт"/>
+              <h3 class="card-title">Многостраничный сайт</h3>
+              <p>Верстка многостранчного сайта.</p>
+            </a>
+          </div>
+        
+          <!-- // card -->
+
+          <!-- card -->
+          <div class="card">
+            <a href="forest-travel.html" class="card-link" target="_blank">
+              <img
+                class="card-img"
+                src="./Project/img/portfolio/unit.jpg"
+                alt="многостранчный сайт"
+              />
+              <h3 class="card-title">Адаптивный лендинг</h3>
+              <p>Верстка многостранчного сайта.</p>
+            </a>
           </div>
           <!-- // card -->
 
           <!-- card -->
           <div class="card">
-            <img
-              class="card-img"
-              src="./img/portfolio/unit.jpg"
-              alt="многостранчный сайт"
-            />
-            <h3 class="card-title">Адаптивный лендинг</h3>
-            <p>Верстка многостранчного сайта.</p>
+            <a href="forest-travel.html" class="card-link" target="_blank">
+              <img
+                class="card-img"
+                src="./Project/img/portfolio/quantim.jpg"
+                alt="многостранчный сайт"
+              />
+              <h3 class="card-title">Личный сайт</h3>
+              <p>Верстка многостранчного сайта.</p>
+            </a>
           </div>
           <!-- // card -->
 
           <!-- card -->
           <div class="card">
-            <img
-              class="card-img"
-              src="./img/portfolio/quantim.jpg"
-              alt="многостранчный сайт"
-            />
-            <h3 class="card-title">Личный сайт</h3>
-            <p>Верстка многостранчного сайта.</p>
-          </div>
-          <!-- // card -->
-
-          <!-- card -->
-          <div class="card">
-            <img
-              class="card-img"
-              src="./img/portfolio/portfolio.jpg"
-              alt="многостранчный сайт"
-            />
-            <h3 class="card-title">Интернет магазин</h3>
-            <p>Верстка многостранчного сайта.</p>
+            <a href="forest-travel.html" class="card-link" target="_blank">
+              <img
+                class="card-img"
+                src="./Project/img/portfolio/portfolio.jpg"
+                alt="многостранчный сайт"
+              />
+              <h3 class="card-title">Интернет магазин</h3>
+              <p>Верстка многостранчного сайта.</p>
+            </a>
           </div>
           <!-- // card -->
 
           <!-- // portfolio-cards-wrapper -->
         </div>
       </div>
-    </div>
+    </section>
+  </main>
     <!-- // portfolio -->
 
-    <div class="footer">
+    <!-- footer -->
+    <footer class="footer">
       <div class="container">
         <div class="footer-row">
 
@@ -102,19 +117,19 @@
               <p>Мои профили в социальных сетях:</p>
               <div class="footer-icons-row">
                 <a href="#">
-                  <img src="./img/icons/instagram.svg" alt="instagram">
+                  <img src="./Project/img/icons/instagram.svg" alt="instagram">
                 </a>
                 <a href="#">
-                  <img src="./img/icons/facebook.svg" alt="facebook">
+                  <img src="./Project/img/icons/facebook.svg" alt="facebook">
                 </a>
                 <a href="#">
-                  <img src="./img/icons/vk.svg" alt="vk">
+                  <img src="./Project/img/icons/vk.svg" alt="vk">
                 </a>
                 <a href="#">
-                  <img src="./img/icons/linkedin.svg" alt="linkedin">
+                  <img src="./Project/img/icons/linkedin.svg" alt="linkedin">
                 </a>
                 <a href="#">
-                  <img src="./img/icons/github.svg" alt="github">
+                  <img src="./Project/img/icons/github.svg" alt="github">
                 </a>
               </div>
           </div>
@@ -129,7 +144,8 @@
 
         </div>
       </div>
-    </div>
+    </footer>
+    <!--// footer --> 
 
   </body>
 </html>
