@@ -1,0 +1,305 @@
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0; /* сбрасываем отступы */
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px; /* max-width нужно писать для адаптивной верстки */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.none {
+  display: none !important; /* стиль, скрывающий ненужные блоки */
+}
+
+/* Header */
+
+.header {
+  position: relative; /* родительский элемент, нужен для position: absolute, который применили к arrow */
+
+  /* определяем модель flex-box для блока .header */
+  display: flex;
+  flex-direction: column; /* выстраиваем flex-элементы в колонку, основная ось - Y */
+  justify-content: center; /* выравниваем по основной оси */
+  align-items: center; /* выравниваем по второстепенной оси */
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #687083;
+  background-image: url("./../img/header/header-bg.jpg");
+  background-size: cover; /* bg-s это размер фонового изображения, 
+  cover - значение при котором оно полностью заполнит собой блок в котором размещено. Фоновое изображение не адаптивно к растягиванию */
+  background-position: center; /* делаем фоновое изображение адаптивным к растягиванию */
+}
+
+.header-title {
+  margin: 0; /* сбрасываем отступы */
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 130%;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.header-subtitle {
+  margin: 0; /* сбрасываем отступы */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+
+  text-align: center;
+  letter-spacing: 0.2em; /* расстояние между буквами */
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.header-arrow {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0); /* можно заменить на margin-left: -24px. Двигаем стрелку */
+}
+
+/* Portfolio */
+
+.portfolio {
+  padding-top: 80px;
+  padding-bottom: 115px;
+}
+
+.portfolio-header {
+  margin: 0;
+  margin-bottom: 70px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  text-align: center;
+  color: #000000;
+}
+
+.portfolio-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* располагает элементы с равными отступами от краев блока */
+}
+
+.card {
+  margin-bottom: 30px;
+  background-color: #fff;
+  max-width: 540px;
+  box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.35);
+  transition: transform 0.2s ease-in; /* Для плавного перехода элемента ниже */
+}
+
+.card:hover {
+  transform: translateY(-15px);
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.card-link {
+  padding: 20px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease-in
+}
+
+.card-link:hover {
+  color: #1e4776;
+  
+}
+
+.card-img {
+  margin-bottom: 20px;
+}
+
+.card-title {
+  margin: 0;
+  margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 45px;
+  padding-bottom: 130px;
+  background-color: #1e4776;
+  color: #fff;
+}
+
+.footer-row {
+  display: flex;
+  
+  flex-direction: row; /* можно не писать, т.к. display: flex по умолчанию создает это свойство */
+  justify-content: space-between;
+
+}
+
+.footer-col {
+  max-width: 350px;
+  flex-grow: 1;
+}
+
+.footer-copyright {
+  color: #7e9ec9;
+  line-height: 1;
+}
+
+.footer-copyright-name {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.footer-copyright p {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footer-icons p {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #FFFFFF;
+}
+
+.footer-icons-row {
+  display: flex;
+  align-items: center;
+}
+
+.footer-icons-row > *  + * { /* + * выбирает соседа слева. У первой ссылки нет соседа слева, поэтому на нее margin-left не будет действовать */
+  margin-left: 30px;
+}
+
+.footer-button {
+  display: inline-block; /* делаем из ссылки блочный элемент. Inline-block будет блочным, но ширина будет обрезана по длине слов, а не по ширине всего блока */
+  height: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  border: 3px solid #FFFFFF;
+  border-radius: 50px;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 44px; /* высота строки равна высоте кнопки */
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in;
+}
+
+.footer-button:hover {
+  background-color: #fff;
+  color: #1e4776;
+}
+
+.footer-contacts p {
+  margin: 15px 0;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #7E9EC9;
+}
+
+/* Project */
+
+.project {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.project-header {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.3;
+}
+
+.project-img {
+  margin-bottom: 70px;      
+}
+
+.project-description {
+  margin: 0 auto 60px;;
+  max-width: 730px;
+}
+
+.project-description p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.project-btn-back {
+  display: inline-block; /* делаем из ссылки блочный элемент. Inline-block будет блочным, но ширина будет обрезана по длине слов, а не по ширине всего блока */
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  border: 3px solid #275BEC;
+  border-radius: 50px;
+
+  color: #275BEC;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 54px; /* высота строки равна высоте кнопки */
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: all 0.2s ease-in;
+}
+
+.project-btn-back:hover {
+  background-color: #275BEC;
+  color: #fff;
+}
+
+
