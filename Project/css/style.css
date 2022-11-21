@@ -8,6 +8,7 @@ body {
   margin: 0; /* сбрасываем отступы */
   font-family: "Montserrat", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -301,8 +302,4 @@ img {
   color: #fff;
 }
 
-/* .block {
-  width: 800px;
-  height: 400px;
-  background-color: #7e9ec9;
-} */
+
